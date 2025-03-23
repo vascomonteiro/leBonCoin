@@ -26,16 +26,13 @@ RUN chown -R www-data:www-data /var/www
 COPY Docker/docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 
-# Install Symfony CLI
-# RUN curl -sS https://get.symfony.com/cli/installer | bash
-# RUN mv /root/.symfony*/bin/symfony /usr/local/bin/symfony
-
 # Install Composer dependencies
-# RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader --no-scripts
 
 # Expose PHP-FPM port
 EXPOSE 9000
+
+# Set entrypoint script
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
 # CMD ["php-fpm"]
-# Set entrypoint script
+

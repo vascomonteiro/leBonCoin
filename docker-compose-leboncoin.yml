@@ -10,6 +10,9 @@ services:
       - database
     networks:
       - leboncoin_network
+    expose:
+      - 9000
+    restart: unless-stopped
 
   nginx:
     image: nginx:1.27-alpine

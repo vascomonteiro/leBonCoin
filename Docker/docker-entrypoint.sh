@@ -11,7 +11,7 @@ until nc -z -v -w30 leboncoin_mariadb 3306; do
   sleep 2
 done
 echo "MariaDB is up!"
-
+composer install --no-interaction --prefer-dist --optimize-autoloader --no-scripts
 # Clear cache
 php bin/console cache:clear --env=prod
 

@@ -16,7 +16,7 @@ Make sure you have the following installed:
    ```
 2. Start the application with Docker:
    ```bash
-   docker-compose up -d --build
+   docker compose -f docker-compose-leboncoin.yml up --build
    ```
 3. The application should now be running at:
    - Backend (Symfony): `http://localhost:8080`
