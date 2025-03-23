@@ -47,7 +47,7 @@ Additional best practices:
 Unit and functional tests ensure stability. To run tests:
 ```bash
 # Run tests inside the container
-docker exec -it leboncoin-php-fpm php bin/phpunit
+docker exec -it leboncoin_app ./vendor/bin/phpunit tests
 ```
 Tests cover:
 - Controller functionality (ex., `FizzBuzzControllerTest`)
