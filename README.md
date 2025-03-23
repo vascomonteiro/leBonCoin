@@ -18,6 +18,11 @@ Make sure you have the following installed:
    ```bash
    docker compose -f docker-compose-leboncoin.yml up --build
    ```
+   Application ready when output containers build shows:
+   .....
+   leboncoin_app      | [23-Mar-2025 22:59:54] NOTICE: fpm is running, pid 1 
+   leboncoin_app      | [23-Mar-2025 22:59:54] NOTICE: ready to handle connections
+
 3. The application should now be running at:
    - Backend (Symfony): `http://localhost:8080`
 
